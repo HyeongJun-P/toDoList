@@ -1,5 +1,5 @@
 import React from 'react';
-import './doTemp.scss';
+import './DoTemp.scss';
 
 const DoTemp = ({children}) => {
     return (

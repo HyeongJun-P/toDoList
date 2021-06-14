@@ -1,15 +1,20 @@
 import React from "react";
 import DoTemp from "./components/DoTemp";
 import DoInsert from "./components/DoInsert";
+import DoList from "./components/DoList";
 
-const App = () => {
+class App extends React.Component {
+  state = {  }
+  render() { 
   return (
-    <div>
-      <DoTemp>
-        <DoInsert />
-      </DoTemp>
-    </div>
-  );
-};
+        <div>
+          <DoTemp>
+            <DoInsert />
+            <DoList />
+          </DoTemp>
+        </div>
+    );
+  }
+}
 
-export default App;
+export default App

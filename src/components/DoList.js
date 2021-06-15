@@ -2,12 +2,9 @@ import React from 'react';
 import DoLitem from './DoLitem';
 import './DoList.scss';
 
-const DoList = () => {
+const DoList = ({todos}) => {
     return (
         <div className="DoList">
-            <DoLitem/>
-            <DoLitem/>
-            <DoLitem/>
         </div>
     );
 }

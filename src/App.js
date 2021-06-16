@@ -48,7 +48,7 @@ const App = () => {
       setTodos(
         todos.map(todo => todo.id === id ? {...todo, checked: !todo.checked}:todo)
       );
-    }
+    },[todos]
   );
 
   return (

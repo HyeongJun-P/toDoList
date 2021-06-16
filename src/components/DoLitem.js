@@ -7,8 +7,8 @@ import {
 import cn from 'classnames';
 import './DoLitem.scss';
 
-const DoLitem = ({todo}) => {
-    const {text, checked} = todo; 
+const DoLitem = ({todo, onRemove}) => {
+    const {id,text, checked} = todo; 
 
     return (
         <div className="DoLitem">
@@ -16,7 +16,9 @@ const DoLitem = ({todo}) => {
                 {checked ? <MdCheckBox/> : <MdCheckBoxOutlineBlank/>}
                 <div className="text">{text}</div>
             </div>
-            <div className="remove">
+            <div className="remove" onClick={() => {
+                onRemove(id)
+            }}>
                 <MdRemoveCircleOutline/>
             </div>
         </div>

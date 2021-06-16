@@ -42,11 +42,19 @@ const App = () => {
     },
     [todos]
   );
-  
+
+  const onToggle = useCallback(
+    id => {
+      setTodos(
+        todos.map(todo => todo.id === id ? {...todo, checked: !todo.checked}:todo)
+      );
+    }
+  );
+
   return (
     <DoTemp>
       <DoInsert onInsert={onInsert}/>
-      <DoList todos={todos}/>
+      <DoList todos={todos} onRemove={onRemove} onToggle={onToggle}/>
     </DoTemp>
   );
 }

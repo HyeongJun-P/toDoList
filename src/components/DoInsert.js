@@ -20,7 +20,7 @@ function DoInsert({ onInsert }) {
 
   return (
     <form className="DoInsert" onSubmit={onSubmit}>
-      <input placeholder="오늘은 뭐하지?" value={value} onChange={onChange} />
+      <input placeholder="오늘 해야할 일" value={value} onChange={onChange} />
       <button
         type="submit"
         

@@ -31,13 +31,21 @@ const App = () => {
         checked:false,
       }
       setTodos(todos.concat(todo));
-      next
+      nextId.current += 1;
     }
-  )
+    ,[todos]
+  );
 
+  const onRemove = useCallback(
+    id => {
+      setTodos(todos.filter(todo => todo.id !== id))
+    },
+    [todos]
+  );
+  
   return (
     <DoTemp>
-      <DoInsert/>
+      <DoInsert onInsert={onInsert}/>
       <DoList todos={todos}/>
     </DoTemp>
   );
